@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>India Live & Direct Vacancies Portal</title>
+
+<!-- Auto refresh every 1 hour -->
+<meta http-equiv="refresh" content="3600">
+
+<style>
+body { font-family: Arial; margin:0; background:#f4f6f9; }
+
+header {
+  background:#0d47a1;
+  color:white;
+  padding:15px;
+  text-align:center;
+}
+
+nav {
+  background:#1565c0;
+  padding:10px;
+  text-align:center;
+}
+
+nav a {
+  color:white;
+  margin:10px;
+  text-decoration:none;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.section { display:none; padding:20px; }
+
+.card {
+  background:white;
+  padding:15px;
+  margin:20px 0;
+  border-radius:8px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+iframe {
+  border:none;
+  border-radius:8px;
+}
+
+.footer {
+  background:#0d47a1;
+  color:white;
+  text-align:center;
+  padding:15px;
+}
+</style>
+
+<script>
+function showSection(id) {
+  let sections = document.getElementsByClassName("section");
+  for (let i=0; i<sections.length; i++) {
+    sections[i].style.display="none";
+  }
+  document.getElementById(id).style.display="block";
+}
+</script>
+
+</head>
+
+<body onload="showSection('live')">
+
+<header>
+<h1>India Government Vacancies Portal</h1>
+<p>Live Updates + Direct Vacancy Links</p>
+</header>
+
+<nav>
+<a onclick="showSection('live')">🔴 Live Vacancies</a>
+<a onclick="showSection('normal')">📄 Direct Vacancies</a>
+</nav>
+
+<!-- 🔴 LIVE VACANCIES -->
+<div id="live" class="section">
+
+<div class="card">
+<h3>UPSC Live Recruitment</h3>
+<iframe src="https://www.upsc.gov.in/recruitment"
+width="100%" height="500px"></iframe>
+</div>
+
+<div class="card">
+<h3>RRB Railway Live Vacancies</h3>
+<iframe src="https://www.rrbcdg.gov.in/"
+width="100%" height="500px"></iframe>
+</div>
+
+</div>
+
+<!-- 📄 NORMAL DIRECT LINKS -->
+<div id="normal" class="section">
+
+<div class="card">
+<h3>SSC Current Notifications</h3>
+<a href="https://ssc.gov.in/" target="_blank">
+Open SSC Vacancies
+</a>
+</div>
+
+<div class="card">
+<h3>SBI Current Openings</h3>
+<a href="https://sbi.co.in/web/careers/current-openings" target="_blank">
+Open SBI Jobs
+</a>
+</div>
+
+<div class="card">
+<h3>IBPS PO Recruitment</h3>
+<a href="https://www.ibps.in/crp-po-mt/" target="_blank">
+Open IBPS PO Jobs
+</a>
+</div>
+
+<div class="card">
+<h3>Indian Army Recruitment</h3>
+<a href="https://joinindianarmy.nic.in/" target="_blank">
+Open Army Jobs
+</a>
+</div>
+
+<div class="card">
+<h3>Karnataka PSC Notifications</h3>
+<a href="https://kpsc.kar.nic.in/Notifications.asp" target="_blank">
+Open KPSC Vacancies
+</a>
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 India Vacancies Portal | Live + Direct Links
+</div>
+
+</body>
+</html>
